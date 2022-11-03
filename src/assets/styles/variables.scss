@@ -1,0 +1,52 @@
+
+$whiteColor: #fff;
+$blackColor: #000;
+$bodyColor: #f5f1f1;
+
+
+$mainFontFamily: 'Roboto', sans-serif;
+$mainHolderWidth: 1900px;
+
+
+$fs1: 14px;
+$fs2: 20px;
+$fs3: 26px;
+$fs4: 32px;
+$fs5: 50px;
+
+$lh1: 20px;
+$lh2: 26px;
+$lh3: 32px;
+$lh4: 36px;
+$lh5: 60px;
+
+$Desktopfs1: 16px;
+$Desktoplh1: 20px;
+
+$mobilefs1: 10px;
+$mobilelh1: 13px;
+
+$mobilefs2: 12px;
+$mobilelh2: 15px;
+
+
+
+/*
+@include font(14px, 20px);
+@include font(20px, 26px);
+@include font(26px, 32px);
+@include font(32px, 36px);
+@include font(50px, 60px);
+
+$fs1: 14px;
+$fs2: 20px;
+$fs3: 26px;
+$fs4: 32px;
+$fs5: 50px;
+
+$lh1: 20px;
+$lh2: 26px;
+$lh3: 32px;
+$lh4: 36px;
+$lh5: 60px;
+*/

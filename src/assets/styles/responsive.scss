@@ -1,0 +1,427 @@
+@include wide-desktop{
+	.holder{
+		max-width: 1300px;
+	}
+	.section-position{
+		.section-table-data{
+			max-width: 1300px;
+			padding: 30px;
+			h2{
+				@include font(40px, 45px);
+				margin: 0 0 15px;
+			}
+			p{
+				@include font(16px, 24px);
+			}
+		}
+	}
+	header{
+		.logo{
+			width: 175px;
+		}
+		nav{
+			margin: 10px 0 0;
+			a{
+				@include font(16px, 20px);
+				padding: 8px 20px;
+			}
+		}
+	}
+	section{
+		h1{
+			@include font(30px, 36px);
+		}
+		.heading{
+			h2{
+				@include font(30px, 36px);
+				margin: 0 0 10px;
+			}
+		}
+	}
+	.skills-progress-nav{
+		li{
+			strong{
+				@include font(20px, 24px);
+			}
+		}
+	}
+	.keyfeatures-nav{
+		.keyfeatures-list{
+			.keyfeatures-holder{
+				min-height: 350px;
+			}
+			.keyfeatures-name{
+				@include font(20px, 24px);
+			}
+			.keyfeatures-paragraph{
+				@include font(16px, 22px);
+			}
+		}
+	}
+	.achievement-nav{
+		li{
+			.achievement-holder{
+				min-height: 200px;
+				padding: 120px 15px 15px;
+			}
+			.pattern-img{
+				width: 75px;
+				top: 40px;
+			}
+			.achievement-name{
+				@include font(20px, 24px);
+			}
+			.achievement-count{
+				@include font(30px, 35px);
+			}
+		}
+	}
+	.offer-services-holder{
+		.offer-services-content{
+			.content-header{
+				i{
+					width: 24px;
+				}
+				strong{
+					@include font(20px, 24px);
+				}
+			}
+			ul{
+				li{
+					padding: 8px 0 8px 40px;
+					i{
+						width: 32px;
+						top: 3px;
+					}
+					span{
+						@include font(16px, 20px);
+					}
+				}
+			}
+			.read-more-btn{
+				@include font(16px, 20px);
+				border-radius: 5px;
+				padding: 10px 15px;
+			}
+		}
+	}
+}
+
+
+@include medium-desktop{
+	.holder{
+		max-width: 1100px;
+	}
+	.section-position{
+		.section-table-data{
+			max-width: 1100px;
+		}
+	}
+	#footer{
+		.holder{
+			max-width: 1100px;
+		}
+	}
+}
+
+
+@include small-desktop{
+	#side-navigation{
+		display: none;
+	}
+	#header{
+		padding: 5px 10px;
+		.hamburger-react{
+			display: block;
+		}
+		#main-navigation{
+			width: 200px;
+			background-color: transparentize($themeColorDark, 0.2);
+			@include anim(1s);
+			opacity: 0;
+			visibility: hidden;
+			margin: 0;
+			position: absolute;
+			top: 100%;
+			right: -400px;
+			li{
+				float: none;
+				margin: 0;
+			}
+			a{
+				color: #fff;
+				border-radius: 0;
+			}
+			&.mobileDevice{
+				opacity: 1;
+				visibility: visible;
+				right: 0;
+			}
+		}
+	}
+	.holder{
+		max-width: 950px;
+	}
+	.section-position{
+		.section-table-data{
+			max-width: 900px;
+		}
+	}
+	#footer{
+		.holder{
+			max-width: 850px;
+		}
+	}
+	.about-section {
+		min-height: 400px;
+	}
+	.portfolio-nav{
+		li{
+			a{
+				height: 400px;
+			}
+		}
+	}
+	.offer-services-holder{
+		.offer-services-block{
+			min-height: 525px;
+		}
+		.offer-services-content{
+			padding: 20px 20px 90px;
+			.content-header{
+				height: 60px;
+				padding: 0 0 10px;
+			}
+			.read-more-btn{
+				bottom: 20px;
+				left: 20px;
+			}
+		}
+	}
+	.skills-progress-nav{
+		li{
+			padding: 10px;
+			strong{
+				@include font(16px, 20px);
+			}
+		}
+	}
+}
+
+
+@include tablet{
+	.holder{
+		max-width: 700px;
+	}
+	.section-position{
+		.section-table-data{
+			max-width: 700px;
+		}
+	}
+	.portfolio-nav{
+		text-align: center;
+		li{
+			width: 50%;
+			padding: 10px;
+		}
+	}
+	.achievement-nav{
+		li{
+			width: 50%;
+			padding: 10px;
+			.achievement-holder{
+				min-height: auto;
+				padding: 15px;
+			}
+			.pattern-img{
+				position: static;
+				transform: none;
+				margin: 0 auto 10px;
+			}
+			.achievement-count{
+				padding: 10px 0 0;
+			}
+		}
+	}
+	.skills-progress-nav{
+		padding: 0;
+		li{
+			width: 25%;
+		}
+	}
+	.offer-services-holder{
+		.offer-services-block{
+			min-height: auto;
+			width: 100%;
+			padding: 10px;
+		}
+		.offer-services-content{
+			min-height: auto;
+			padding: 20px;
+			.content-header{
+				height: auto;
+				margin: 0 0 20px;
+			}
+			ul{
+				li{
+					@include display(inline-block, top);
+					width: 25%;
+				}
+			}
+			.read-more-btn{
+				position: static;
+				margin: 30px 0 0;
+			}
+		}
+	}
+	#footer{
+		.holder{
+			max-width: 700px;
+		}
+		.footer-column{
+			text-align: center;
+			width: 33.33%;
+			padding: 0 0 60px;
+			&.address-column{
+				width: 100%;
+				li{
+					@include display(inline-block, top);
+					width: 33.33%;
+				}
+			}
+			h6{
+				margin: 0 0 10px;
+			}
+		}
+	}
+}
+
+
+@include mobile{
+	#header{
+		height: 65px;
+		.logo{
+			width: 130px;
+			margin: 7px 0 0;
+		}
+	}
+	section{
+		padding: 30px 0;
+		.heading{
+			text-align: center;
+			padding: 0 15px 30px;
+			p{
+				display: none;
+			}
+		}
+	}
+	.section-position{
+		position: static;
+		.section-table-data{
+			border-radius: 0;
+			padding: 20px;
+			h2{
+				@include font(24px, 28px);
+			}
+		}
+	}
+	.banner-section{
+		background-position: top;
+		min-height: auto;
+		padding: 65px 0 0;
+	}
+	.portfolio-nav{
+		li{
+			width: 100%;
+			a{
+				height: auto;
+				.portfolio-holder{
+					min-height: 100%;
+					position: static;
+				}
+			}
+			img{
+				height: auto;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: -1;
+			}
+		}
+	}
+	.achievement-nav{
+		li{
+			width: 100%;
+			padding: 5px 10px;
+			.pattern-img{
+				width: 50px;
+			}
+			.achievement-name{
+				@include font(16px, 20px);
+			}
+			.achievement-count{
+				@include font(20px, 24px);
+			}
+		}
+	}
+	.offer-services-holder{
+		.offer-services-content{
+			ul{
+				li{
+					width: 50%;
+					span{
+						@include font(14px, 20px);
+					}
+				}
+			}
+		}
+	}
+	.keyfeatures-nav{
+		padding: 0;
+		.keyfeatures-list{
+			.keyfeatures-holder{
+				min-height: auto;
+				border-radius: 10px;
+				text-align: center;
+				.pattern-img{
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+	.skills-section{
+		padding: 20px;
+	}
+	.skills-progress-nav{
+		li{
+			width: 33.33%;
+		}
+	}
+	.about-section{
+		min-height: auto;
+		padding: 0;
+	}
+	#footer{
+		.footer-column{
+			width: 100%;
+			padding: 0 0 30px;
+			&.address-column{
+				li{
+					width: 100%;
+				}
+			}
+		}
+		.footer-bottom{
+			@include font(14px, 18px);
+			padding: 15px;
+		}
+	}
+}
+
+
+
+
+
+

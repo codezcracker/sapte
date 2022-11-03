@@ -1,0 +1,52 @@
+@mixin responsive-image{
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+@mixin font($size, $lineHeight){
+	font-size: $size;
+	line-height: $lineHeight;
+}
+
+@mixin display($display, $vAlign){
+	display: $display;
+	vertical-align: $vAlign;
+}
+
+@mixin anim($delay){
+	-webkit-transition: all $delay;
+	-moz-transition: all $delay;
+	transition: all $delay;
+}
+
+@mixin crossBrowser($property, $css) {
+	-webkit-#{$property} : $css;
+	-moz-#{$property} : $css;
+	#{$property} : $css;
+}
+
+@mixin clearfix{
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin wide-desktop{
+	@media screen and (max-width: 1920px){ @content; }
+}
+@mixin medium-desktop{
+	@media screen and (max-width: 1378px){ @content; }
+}
+@mixin small-desktop{
+	@media screen and (max-width: 1200px){ @content; }
+}
+@mixin tablet{
+	@media screen and (max-width: 1023px){ @content; }
+}
+@mixin mobile{
+	@media screen and (max-width: 767px){ @content; }
+}
+

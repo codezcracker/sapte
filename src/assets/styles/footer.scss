@@ -1,0 +1,88 @@
+#footer{
+	background-color: $footerColorLight;
+	.holder{
+		max-width: 1200px;
+	}
+	.footer-column{
+		float: left;
+		width: 25%;
+		&.address-column{
+			a{
+				padding: 5px 5px 5px 25px;
+			}
+			svg{
+				@include responsive-image();
+				max-width: 20px;
+				position: absolute;
+				top: 5px;
+				left: 0;
+			}
+			span{
+				display: block;
+			}
+		}
+		h6{
+			color: transparentize($whiteColor, 0.2);
+			@include font(20px, 24px);
+			margin: 0 0 20px;
+		}
+		ul{
+			a{
+				position: relative;
+				@include display(inline-block, top);
+				color: transparentize($whiteColor, 0.7);
+				@include font(16px, 20px);
+				@include anim(0.5s);
+				padding: 5px 0;
+				&:hover{
+					color: $whiteColor;
+				}
+			}
+		}
+	}
+	.footer-top{
+		padding: 50px 0 0;
+	}
+	.footer-middle{
+		text-align: center;
+		padding: 20px;
+		li{
+			@include display(inline-block, top);
+			margin: 0 5px;
+		}
+		a{
+			display: block;
+			color: $footerColorDark;
+			line-height: 36px;
+			height: 36px;
+			width: 36px;
+			text-align: center;
+			border-radius: 50%;
+			background-color: $whiteColor;
+			box-shadow: 0 3px 5px transparentize($blackColor, 0.7);
+			@include anim(0.5s);
+			padding: 7px;
+			&:hover{
+				background-color: transparentize($whiteColor, 0.3);
+				transform: scale(1.1);
+			}
+			svg{
+				@include responsive-image();
+			}
+		}
+	}
+	.footer-bottom{
+		color: transparentize($whiteColor, 0.7);
+		@include font(16px, 20px);
+		text-align: center;
+		background-color: $footerColorDark;
+		padding: 20px;
+		a{
+			color: $whiteColor;
+			@include anim(0.5s);
+			&:hover{
+				color: transparentize($whiteColor, 0.7);
+			}
+		}
+	}
+}

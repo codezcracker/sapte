@@ -1,0 +1,14 @@
+[
+  {
+    "socialIcon": "FaFacebookF",
+    "socialUrl": "https://facebook.com"
+  },
+  {
+    "socialIcon": "FaInstagram",
+    "socialUrl": "https://instagram.com"
+  },
+  {
+    "socialIcon": "FaTwitter",
+    "socialUrl": "https://twitter.com"
+  }
+]

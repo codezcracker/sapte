@@ -1,0 +1,426 @@
+/*Calendar&Schedule page css start*/
+#app{
+	overflow: hidden;
+	position: relative;
+}
+.holder{
+	max-width: $mainHolderWidth;
+	margin: 0 auto;
+	@include clearfix();
+}
+section{
+	position: relative;
+	min-height: 100vh;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	z-index: 0;
+	padding: 65px 0;
+	&.normal-height{
+		min-height: 100%;
+	}
+	&.fix-bg{
+		background-attachment: fixed;
+	}
+	h1{
+		color: $whiteColor;
+		@include font(40px, 50px);
+		background-color: transparentize($themeColorDark, 0.2);
+		text-align: center;
+		padding: 10px;
+	}
+	.heading{
+		padding: 0 0 20px;
+		h2{
+			@include font(50px, 54px);
+			font-weight: bold;
+			margin: 0 0 20px;
+		}
+		p{
+			@include font(20px, 28px);
+		}
+		&.heading-light{
+			h2{
+				color: $whiteColor;
+				text-shadow: 0 -25px 2px transparentize($whiteColor, 0.95);
+			}
+			p{
+				color: $whiteColor;
+			}
+		}
+		&.heading-dark{
+			h2{
+				color: $themeColorDark;
+				text-shadow: 0 -25px 2px transparentize($themeColorDark, 0.95);
+			}
+			p{
+				color: $themeColorDark;
+			}
+		}
+	}
+}
+.section-position{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	.section-table{
+		display: table;
+		height: 100%;
+		width: 100%;
+	}
+	.section-table-cell{
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+	}
+	.section-table-data{
+		max-width: 1600px;
+		border-radius: 5px;
+		padding: 50px 30px;
+		margin: 0 auto;
+		&.with-bg{
+			box-shadow: 0 5px 20px transparentize($blackColor, 0.9);
+			background-color: transparentize($themeColorDark, 0.2);
+		}
+		h2{
+			color: $whiteColor;
+			@include font(50px, 60px);
+			margin: 0 0 25px;
+		}
+		p{
+			color: $whiteColor;
+			@include font(24px, 36px);
+		}
+	}
+}
+#side-navigation{
+	background-color: transparentize($whiteColor, 0.2);
+	box-shadow: 0 5px 20px transparentize($blackColor, 0.9);
+	border-radius: 20px;
+	padding: 5px 10px;
+	position: fixed;
+	top: 50%;
+	left: 0;
+	z-index: 9;
+	transform: translateY(-50%);
+	nav{
+		li{
+			margin: 7px 0;
+		}
+		a{
+			display: block;
+			background-color: transparentize($themeColorDark, 0.2);
+			font-size: 0;
+			height: 16px;
+			width: 16px;
+			border-radius: 50%;
+			cursor: pointer;
+			padding: 5px;
+			@include anim(0.2s);
+			&:hover{
+				transform: scale(1.2);
+				background-color: $whiteColor;
+				box-shadow: 0 1px 5px transparentize($blackColor, 0.8);
+			}
+			&.active{
+				transform: scale(1.2);
+				background-color: $whiteColor;
+				box-shadow: 0 1px 5px transparentize($blackColor, 0.8);
+				&:hover{
+					transform: scale(1.2);
+					background-color: $whiteColor;
+				}
+			}
+		}
+	}
+}
+.about-section{
+	min-height: 600px;
+	.section-table-data{
+		&.with-bg{
+			background-color: rgba(62, 117, 165, 0.9);
+		}
+	}
+}
+.skills-section{
+	.heading{
+		text-align: center;
+	}
+}
+.skills-progress-nav{
+	text-align: center;
+	padding: 50px 0;
+	li{
+		@include display(inline-block, top);
+		width: 16.66%;
+		padding: 20px;
+		svg{
+			.CircularProgressbar-path{
+				stroke: $themeColorDark;
+			}
+		}
+		strong{
+			display: block;
+			color: $themeColorDark;
+			@include font(34px, 38px);
+		}
+		span{
+			display: block;
+			color: $themeColorLight;
+			@include font(24px, 28px);
+		}
+	}
+}
+
+.portfolio-section{
+	.heading{
+		text-align: center;
+	}
+}
+.portfolio-nav{
+	li {
+		@include display(inline-block, top);
+		width: 33.33%;
+		padding: 15px;
+		a{
+			display: block;
+			position: relative;
+			height: 500px;
+			overflow: hidden;
+			border-radius: 5px;
+			box-shadow: 0 5px 15px transparentize($blackColor, 0.8);
+			&:hover{
+				.portfolio-holder{
+					min-height: 100%;
+				}
+			}
+		}
+		img{
+			display: block;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			object-position: top;
+			@include anim(1s);
+		}
+		.portfolio-holder{
+			display: block;
+			background-color: transparentize($themeColorDark, 0.1);
+			min-height: 50px;
+			padding: 15px;
+			@include anim(0.5s);
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			h3{
+				color: $whiteColor;
+				@include font(20px, 24px);
+				margin: 0 0 10px;
+			}
+			p{
+				color: $whiteColor;
+				@include font(16px, 22px);
+			}
+		}
+	}
+}
+
+.achievement-section{
+	background-color: #f1f1f1;
+	.heading{
+		text-align: center;
+	}
+}
+.achievement-nav{
+	text-align: center;
+	li{
+		position: relative;
+		@include display(inline-block, top);
+		width: 33.33%;
+		padding: 15px;
+		.achievement-holder{
+			background-color: $whiteColor;
+			box-shadow: 0 10px 20px transparentize($blackColor, 0.9);
+			border-radius: 10px;
+			min-height: 300px;
+			padding: 155px 15px 15px;
+		}
+		.pattern-img{
+			@include responsive-image();
+			color: transparentize($themeColorDark, 0.2);
+			width: 100px;
+			position: absolute;
+			top: 60px;
+			left: 50%;
+			transform: translateX(-50%);
+			svg{
+				display: block;
+				height: 100%;
+				width: 100%;
+			}
+		}
+		.achievement-name{
+			display: block;
+			color: $themeColorDark;
+			@include font(24px, 28px);
+		}
+		.achievement-count{
+			display: block;
+			color: $themeColorDark;
+			@include font(50px, 54px);
+			padding: 10px 0;
+		}
+	}
+}
+
+.keyfeatures-section{
+	background-color: #524bb8;
+}
+.keyfeatures-nav{
+	padding: 50px 0;
+	.keyfeatures-list{
+		position: relative;
+		@include display(inline-block, top);
+		width: 25%;
+		padding: 15px;
+		.keyfeatures-holder{
+			background-color: #4842a8;
+			box-shadow: 0 0 20px transparentize($blackColor, 0.9);
+			border-radius: 20px;
+			min-height: 400px;
+			padding: 20px;
+		}
+		.pattern-img{
+			@include responsive-image();
+			color: transparentize($whiteColor, 0.2);
+			width: 80px;
+			svg{
+				display: block;
+				height: 100%;
+				width: 100%;
+			}
+		}
+		.keyfeatures-name{
+			display: block;
+			color: $whiteColor;
+			@include font(28px, 32px);
+			margin: 30px 0 0;
+		}
+		.keyfeatures-paragraph{
+			display: block;
+			color: $whiteColor;
+			@include font(20px, 28px);
+			margin: 20px 0 0;
+		}
+	}
+}
+
+
+.offerServices-section{
+	text-align: center;
+	background-color: #f1f1f1;
+}
+
+.offer-services-holder{
+	text-align: center;
+	.offer-services-block{
+		@include display(inline-block, top);
+		width: 33.33%;
+		padding: 15px;
+	}
+	.offer-services-content{
+		position: relative;
+		text-align: left;
+		background-color: $whiteColor;
+		box-shadow: 0 10px 20px transparentize($blackColor, 0.9);
+		border-radius: 10px;
+		min-height: 300px;
+		padding: 30px 30px 120px;
+		.content-header{
+			overflow: hidden;
+			padding: 0 0 30px;
+			i{
+				float: left;
+				fill: $themeColorLight;
+				width: 32px;
+				margin: 0 10px 0 0;
+				svg{
+					@include responsive-image();
+				}
+			}
+			strong{
+				display: block;
+				overflow: hidden;
+				color: $themeColorLight;
+				@include font(32px, 35px);
+			}
+		}
+		ul{
+			li{
+				position: relative;
+				padding: 10px 0 10px 50px;
+				i{
+					display: block;
+					width: 40px;
+					position: absolute;
+					top: 3px;
+					left: 0;
+					svg{
+						@include responsive-image();
+					}
+				}
+				span{
+					display: block;
+					overflow: hidden;
+					color: $blackColor;
+					@include font(20px, 25px);
+				}
+			}
+		}
+		.offerServices-name{
+			display: block;
+			color: $themeColorDark;
+			@include font(24px, 28px);
+		}
+		.offerServices-count{
+			display: block;
+			color: $themeColorDark;
+			@include font(50px, 54px);
+			padding: 10px 0;
+		}
+		.read-more-btn{
+			@include display(inline-block, top);
+			color: $whiteColor;
+			@include font(20px, 24px);
+			text-align: center;
+			border-radius: 10px;
+			background-color: $themeColorLight;
+			box-shadow: 0 10px 20px transparentize($blackColor, 0.9);
+			padding: 15px 20px;
+			position: absolute;
+			bottom: 30px;
+			left: 30px;
+			@include anim(0.2s);
+			&:hover{
+				background-color: $themeColorDark;
+			}
+		}
+	}
+}
+
+
+@media not all and (min-resolution:.001dpcm){
+	section{
+		background-attachment: initial;
+		&.fix-bg{
+			background-attachment: initial;
+		}
+	}
+}
+
+/*Calendar&Schedule page css end*/
