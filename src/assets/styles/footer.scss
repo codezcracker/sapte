@@ -1,87 +1,96 @@
 #footer{
-	background-color: $footerColorLight;
-	.holder{
-		max-width: 1200px;
-	}
-	.footer-column{
-		float: left;
-		width: 25%;
-		&.address-column{
-			a{
-				padding: 5px 5px 5px 25px;
+	background-color: $whiteColor;
+	.footer-top{
+		border-top: 1px solid $borderColor;
+		padding: 60px 0;
+		.footer-column{
+			float: left;
+			width: 17%;
+			&.address-column{
+				width: 49%;
+				p{
+					color: $baseFontColorDark1;
+					max-width: 300px;
+				}
 			}
-			svg{
-				@include responsive-image();
-				max-width: 20px;
-				position: absolute;
-				top: 5px;
-				left: 0;
+			h6{
+				color: $baseFontColorDark2;
+				@include font(16px, 24px);
+				font-weight: 600;
+				margin: 0 0 20px;
 			}
-			span{
-				display: block;
-			}
-		}
-		h6{
-			color: transparentize($whiteColor, 0.2);
-			@include font(20px, 24px);
-			margin: 0 0 20px;
-		}
-		ul{
-			a{
-				position: relative;
-				@include display(inline-block, top);
-				color: transparentize($whiteColor, 0.7);
-				@include font(16px, 20px);
-				@include anim(0.5s);
-				padding: 5px 0;
-				&:hover{
-					color: $whiteColor;
+			ul{
+				a{
+					position: relative;
+					@include display(inline-block, top);
+					color: $baseFontColorDark1;
+					@include font(16px, 24px);
+					@include anim(0.5s);
+					padding: 0 0 6px;
+					&:hover{
+						color: $themeColorDark;
+					}
 				}
 			}
 		}
-	}
-	.footer-top{
-		padding: 50px 0 0;
-	}
-	.footer-middle{
-		text-align: center;
-		padding: 20px;
-		li{
-			@include display(inline-block, top);
-			margin: 0 5px;
-		}
-		a{
-			display: block;
-			color: $footerColorDark;
-			line-height: 36px;
-			height: 36px;
-			width: 36px;
-			text-align: center;
-			border-radius: 50%;
-			background-color: $whiteColor;
-			box-shadow: 0 3px 5px transparentize($blackColor, 0.7);
-			@include anim(0.5s);
-			padding: 7px;
-			&:hover{
-				background-color: transparentize($whiteColor, 0.3);
-				transform: scale(1.1);
+		.logo-dark{
+			width: 105px;
+			margin: 0 0 24px;
+			a{
+				display: block;
+			}
+			img{
+				@include responsive-image();
 			}
 			svg{
 				@include responsive-image();
+			}
+			.logo-fill{
+				fill: $themeColorLight;
+			}
+			.dark-color-path{
+				fill: $baseFontColorDark2;
 			}
 		}
 	}
 	.footer-bottom{
-		color: transparentize($whiteColor, 0.7);
+		color: $baseFontColorLight;
 		@include font(16px, 20px);
-		text-align: center;
-		background-color: $footerColorDark;
+		border-top: 1px solid $borderColor;
 		padding: 20px;
-		a{
-			color: $whiteColor;
-			@include anim(0.5s);
-			&:hover{
-				color: transparentize($whiteColor, 0.7);
+		p{
+			float: left;
+			margin: 7px 0 0;
+			a{
+				color: $baseFontColorLight;
+				@include anim(0.5s);
+				&:hover{
+					color: $themeColorDark;
+				}
+			}
+		}
+		ul{
+			float: right;
+			li{
+				@include display(inline-block, top);
+				margin: 0 5px;
+				a{
+					display: block;
+					fill: $baseFontColorLight;
+					line-height: 36px;
+					height: 36px;
+					width: 36px;
+					text-align: center;
+					@include anim(0.5s);
+					padding: 7px;
+					&:hover{
+						fill: $themeColorDark;
+						transform: scale(1.1);
+					}
+					svg{
+						@include responsive-image();
+					}
+				}
 			}
 		}
 	}

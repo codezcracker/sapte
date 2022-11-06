@@ -1,7 +1,7 @@
 header{
-  background-color: transparentize($whiteColor, 0.1);
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  padding: 5px 0;
+//  background-color: transparentize($whiteColor, 0.1);
+//  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 20px 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -10,7 +10,7 @@ header{
   @include clearfix();
   .logo{
     float: left;
-    width: 220px;
+    width: 100px;
     a{
       display: block;
     }
@@ -21,13 +21,12 @@ header{
       @include responsive-image();
     }
     .logo-fill{
-      fill: $themeColorLight;
+      fill: $themeColorDark;
     }
   }
 
   nav{
     float: right;
-    margin: 13px 0 0;
     ul{
       @include clearfix();
     }
@@ -37,21 +36,45 @@ header{
     }
     a{
       display: block;
-      color: $themeColorLight;
-      border-radius: 4px;
+      color: $whiteColor;
+      border-radius: 7px;
+      border: 1px solid transparent;
       cursor: pointer;
-      padding: 8px 30px;
-      @include font($fs2, $lh2);
+      padding: 10px 30px;
+      @include font(16px, 18px);
       @include anim(0.5s);
+      &#signup-button{
+        color: $whiteColor;
+        border-color: $whiteColor;
+        &:hover{
+          color: $whiteColor;
+          border-color: $themeColorLight;
+          background: $themeColorLight;
+        }
+        &.active{
+          color: $whiteColor;
+          border-color: $themeColorDark;
+          background: $themeColorDark;
+          &:hover{
+            color: $whiteColor;
+            border-color: $themeColorLight;
+            background: $themeColorLight;
+          }
+        }
+      }
       &:hover{
         color: $whiteColor;
-        background-color: $themeColorDark;
+        border-color: $themeColorLight;
+        background: $themeColorLight;
       }
       &.active{
         color: $whiteColor;
-        background-color: $themeColorLight;
+        border-color: $themeColorDark;
+        background: $themeColorDark;
         &:hover{
-          background-color: $themeColorDark;
+          color: $whiteColor;
+          border-color: $themeColorLight;
+          background: $themeColorLight;
         }
       }
     }

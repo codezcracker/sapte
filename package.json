@@ -37,6 +37,7 @@
     "react-circular-progressbar": "^2.1.0",
     "react-icons": "^4.4.0",
     "react-scroll": "^1.8.7",
+    "react-search-autocomplete": "^8.0.0",
     "react-slick": "^0.29.0",
     "react-tsparticles": "^2.3.3",
     "sass": "^1.55.0",

@@ -1,22 +1,15 @@
 import { Fragment } from 'preact';
-import Skill from "./skill";
-import Portfolio from "./portfolio";
-import About from "./about";
+import Category from "./category";
 import Banner from "./banner";
-import CircleAnimation from "./circle-animation";
-import Achievement from "./achievement";
-import KeyFeatures from "./key-features";
-import OfferServices from "./offer-services";
+import HowItWork from "./howitwork";
+import PopularServices from "./popular-services";
 
 const Home = () => (
 	<Fragment>
 		<Banner />
-		<Skill />
-		<KeyFeatures />
-		<Portfolio />
-		<Achievement />
-		<OfferServices />
-		<About />
+		<Category />
+		<PopularServices />
+		<HowItWork />
 	</Fragment>
 );
 

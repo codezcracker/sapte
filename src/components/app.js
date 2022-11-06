@@ -2,31 +2,26 @@ import { Router } from 'preact-router';
 import Header from './sections/header';
 import Footer from './sections/footer';
 import Home from "./sections/home";
-import Skill from './sections/skill';
-import Portfolio from "./sections/portfolio";
-import About from "./sections/about";
-import MainNavigation from "./menu/main-nav";
-import Achievement from "./sections/achievement";
-import KeyFeatures from "./sections/key-features";
-import OfferServices from "./sections/offer-services";
+import Category from './sections/category';
+import Howitwork from "./sections/howitwork";
+import OfferServices from "./sections/popular-services";
+import Error from "./sections/error";
 
-const App = () => (
-	<div id="app">
-		<Header />
-		<aside id="side-navigation">
-			<MainNavigation />
-		</aside>
-		<Router>
-			<Home path="/" />
-			<Skill path="/skills" />
-			<KeyFeatures path="/keykeatures" />
-			<Portfolio path="/portfolio" />
-			<Achievement path="/achievement" />
-			<OfferServices path="/offer-services" />
-			<About path="/about" />
-		</Router>
-		<Footer />
-	</div>
-)
+
+const App = () => {
+	return(
+		<div id="app" >
+			<Header />
+			<Router >
+				<Home path="/" />
+				<Error default={true} />
+				<Category path="/category" />
+				<Howitwork path="/howitwork" />
+				<OfferServices path="/offer-services" />
+			</Router>
+			<Footer />
+		</div>
+	)
+}
 
 export default App;

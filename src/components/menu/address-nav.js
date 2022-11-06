@@ -21,7 +21,7 @@ const menuList = [
 ];
 
 const AddressNav = () => (
-	<nav id="address-nav">
+	<nav id="address-nav" className="address-nav">
 		<ul>
 			{
 				menuList.map(menuItem => (

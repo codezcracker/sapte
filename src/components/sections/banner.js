@@ -1,11 +1,14 @@
+import Search from "./search";
+
 const Banner = () => (
-	<section id="banner-section" className="banner-section fix-bg" style="background-image: url('../../assets/images/background.jpg')" >
+	<section id="banner-section" className="banner-section" style="background-image: url('../../assets/images/background.jpg')" >
 		<div className="section-position">
 			<div className="section-table">
 				<div className="section-table-cell">
-					<div className="section-table-data with-bg">
-						<h2>Lorem ipsum dolor sit amet</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto asperiores deleniti dolor est ex harum illo molestias nam, nulla officiis provident repudiandae sunt tempore temporibus unde vero voluptas voluptates.</p>
+					<div className="section-table-data">
+						<h2>Find the best professionals in your community</h2>
+						<p>Discover hundreds of services and get the perfect match for your needs</p>
+						<Search />
 					</div>
 				</div>
 			</div>

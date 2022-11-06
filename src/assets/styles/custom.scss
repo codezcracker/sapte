@@ -10,19 +10,6 @@
 }
 section{
 	position: relative;
-	min-height: 100vh;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	z-index: 0;
-	padding: 65px 0;
-	&.normal-height{
-		min-height: 100%;
-	}
-	&.fix-bg{
-		background-attachment: fixed;
-	}
 	h1{
 		color: $whiteColor;
 		@include font(40px, 50px);
@@ -33,7 +20,7 @@ section{
 	.heading{
 		padding: 0 0 20px;
 		h2{
-			@include font(50px, 54px);
+			@include font(30px, 38px);
 			font-weight: bold;
 			margin: 0 0 20px;
 		}
@@ -78,7 +65,7 @@ section{
 		vertical-align: middle;
 	}
 	.section-table-data{
-		max-width: 1600px;
+		max-width: 1440px;
 		border-radius: 5px;
 		padding: 50px 30px;
 		margin: 0 auto;
@@ -88,12 +75,13 @@ section{
 		}
 		h2{
 			color: $whiteColor;
-			@include font(50px, 60px);
-			margin: 0 0 25px;
+			@include font(48px, 60px);
+			font-weight: bold;
+			margin: 0 0 20px;
 		}
 		p{
-			color: $whiteColor;
-			@include font(24px, 36px);
+			color: #D3D3D3;
+			@include font(16px, 24px);
 		}
 	}
 }
@@ -138,43 +126,87 @@ section{
 		}
 	}
 }
-.about-section{
-	min-height: 600px;
-	.section-table-data{
-		&.with-bg{
-			background-color: rgba(62, 117, 165, 0.9);
-		}
-	}
+.error-section{
+	min-height: 800px;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 65px 0;
+	z-index: 0;
 }
-.skills-section{
+.banner-section{
+	min-height: 600px;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 65px 0;
+	z-index: 0;
+}
+.product-section{
 	.heading{
 		text-align: center;
 	}
 }
-.skills-progress-nav{
-	text-align: center;
-	padding: 50px 0;
-	li{
-		@include display(inline-block, top);
-		width: 16.66%;
-		padding: 20px;
-		svg{
-			.CircularProgressbar-path{
-				stroke: $themeColorDark;
+.category-section{
+	background: $whiteColor;
+	padding: 20px 0;
+	ul{
+		li{
+			@include display(inline-block, top);
+			width: 25%;
+			padding: 0 16px;
+		}
+		a{
+			display: block;
+			position: relative;
+			color: $baseFontColorDark2;
+			border-bottom: 1px solid $borderColor;
+			padding: 15px 0 15px 30px;
+			@include clearfix();
+			@include anim(0.2s);
+			&:hover{
+				color: $themeColorLight;
+				border-color: $themeColorLight;
+				path{
+					stroke: $themeColorLight;
+				}
 			}
-		}
-		strong{
-			display: block;
-			color: $themeColorDark;
-			@include font(34px, 38px);
-		}
-		span{
-			display: block;
-			color: $themeColorLight;
-			@include font(24px, 28px);
+			i{
+				display: block;
+				height: 24px;
+				width: 20px;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				svg{
+					display: block;
+					height: 100%;
+					width: 100%;
+					fill: none;
+				}
+			}
+			span{
+				display: block;
+				overflow: hidden;
+				@include font(16px, 24px);
+			}
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .portfolio-section{
 	.heading{
@@ -230,50 +262,44 @@ section{
 	}
 }
 
-.achievement-section{
-	background-color: #f1f1f1;
-	.heading{
-		text-align: center;
-	}
+.howitwork-section{
+	background-color: $whiteColor;
+	padding: 75px 0;
 }
-.achievement-nav{
-	text-align: center;
+.howitwork-nav{
+	ul{
+		margin: 0 -15px;
+	}
 	li{
 		position: relative;
 		@include display(inline-block, top);
 		width: 33.33%;
 		padding: 15px;
-		.achievement-holder{
-			background-color: $whiteColor;
-			box-shadow: 0 10px 20px transparentize($blackColor, 0.9);
-			border-radius: 10px;
-			min-height: 300px;
-			padding: 155px 15px 15px;
-		}
 		.pattern-img{
 			@include responsive-image();
 			color: transparentize($themeColorDark, 0.2);
-			width: 100px;
-			position: absolute;
-			top: 60px;
-			left: 50%;
-			transform: translateX(-50%);
+			background: #ffedf3;
+			border-radius: 50%;
+			height: 48px;
+			width: 48px;
+			padding: 12px;
+			margin: 0 0 20px;
 			svg{
 				display: block;
 				height: 100%;
 				width: 100%;
+				fill: none;
 			}
 		}
-		.achievement-name{
-			display: block;
-			color: $themeColorDark;
-			@include font(24px, 28px);
+		h2{
+			color: $baseFontColorDark2;
+			@include font(20px, 30px);
+			font-weight: 600;
+			margin: 0 0 10px;
 		}
-		.achievement-count{
-			display: block;
-			color: $themeColorDark;
-			@include font(50px, 54px);
-			padding: 10px 0;
+		p{
+			color: $baseFontColorDark1;
+			@include font(16px, 24px);
 		}
 	}
 }
@@ -319,108 +345,181 @@ section{
 		}
 	}
 }
-
-
-.offerServices-section{
-	text-align: center;
-	background-color: #f1f1f1;
-}
-
-.offer-services-holder{
-	text-align: center;
-	.offer-services-block{
-		@include display(inline-block, top);
-		width: 33.33%;
-		padding: 15px;
-	}
-	.offer-services-content{
-		position: relative;
-		text-align: left;
-		background-color: $whiteColor;
-		box-shadow: 0 10px 20px transparentize($blackColor, 0.9);
-		border-radius: 10px;
-		min-height: 300px;
-		padding: 30px 30px 120px;
-		.content-header{
-			overflow: hidden;
-			padding: 0 0 30px;
-			i{
-				float: left;
-				fill: $themeColorLight;
-				width: 32px;
-				margin: 0 10px 0 0;
-				svg{
-					@include responsive-image();
-				}
+.popular-service-section{
+	background: $whiteColor;
+	padding: 50px 0;
+	.more-services-btn-holder{
+		text-align: right;
+		padding: 20px 0;
+		.more-services-btn{
+			@include display(inline-block, top);
+			color: $themeColorDark;
+			span{
+				@include display(inline-block, middle);
+				@include font(14px, 20px);
 			}
-			strong{
-				display: block;
-				overflow: hidden;
-				color: $themeColorLight;
-				@include font(32px, 35px);
+			svg{
+				@include display(inline-block, middle);
+				height: 20px;
+				width: 14px;
+				fill: none;
+				margin: 0 0 0 5px;
 			}
 		}
-		ul{
-			li{
-				position: relative;
-				padding: 10px 0 10px 50px;
+	}
+}
+
+.popular-services-holder{
+	ul{
+		margin: 0 -10px;
+		li{
+			@include display(inline-block, top);
+			width: 25%;
+			padding: 10px;
+		}
+	}
+	.popular-services-block{
+		display: block;
+		position: relative;
+		overflow: hidden;
+		background-color: $whiteColor;
+		box-shadow: 0 0 20px transparentize($blackColor, 0.9);
+		border-radius: 7px;
+		padding: 0 0 60px;
+		.popular-services-block-top{
+			padding: 15px;
+			img{
+				display: block;
+				height: 130px;
+				width: 100%;
+				overflow: hidden;
+				border-radius: 10px;
+				object-fit: cover;
+			}
+		}
+		.popular-services-block-middle{
+			overflow-x: hidden;
+			overflow-y: auto;
+			height: 140px;
+			padding: 0 15px;
+			h2{
+				color: $baseFontColorDark2;
+				@include font(16px, 24px);
+				margin: 0 0 15px;
+			}
+			.rating-holder{
 				i{
-					display: block;
-					width: 40px;
-					position: absolute;
-					top: 3px;
-					left: 0;
+					@include display(inline-block, middle);
+					height: 20px;
+					width: 20px;
 					svg{
 						@include responsive-image();
 					}
 				}
+				strong{
+					@include display(inline-block, middle);
+					@include font(14px, 20px);
+					color: $baseFontColorDark2;
+					margin: 0 0 0 6px;
+				}
+				span{
+					@include display(inline-block, middle);
+					@include font(14px, 20px);
+					color: $baseFontColorDark1;
+					margin: 0 0 0 6px;
+				}
+			}
+			address{
+				padding: 15px 0;
+				svg{
+					float: left;
+					height: 20px;
+					width: 20px;
+					fill: none;
+				}
 				span{
 					display: block;
 					overflow: hidden;
-					color: $blackColor;
-					@include font(20px, 25px);
+					color: $baseFontColorDark1;
+					@include font(14px, 20px);
+					word-break: break-all;
+					padding: 0 10px;
 				}
 			}
 		}
-		.offerServices-name{
-			display: block;
-			color: $themeColorDark;
-			@include font(24px, 28px);
-		}
-		.offerServices-count{
-			display: block;
-			color: $themeColorDark;
-			@include font(50px, 54px);
-			padding: 10px 0;
-		}
-		.read-more-btn{
-			@include display(inline-block, top);
-			color: $whiteColor;
-			@include font(20px, 24px);
-			text-align: center;
-			border-radius: 10px;
-			background-color: $themeColorLight;
-			box-shadow: 0 10px 20px transparentize($blackColor, 0.9);
-			padding: 15px 20px;
+		.popular-services-block-bottom{
+			border-top: 1px solid $borderColor;
+			background: $whiteColor;
+			padding: 15px;
 			position: absolute;
-			bottom: 30px;
-			left: 30px;
-			@include anim(0.2s);
-			&:hover{
-				background-color: $themeColorDark;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			.user-holder{
+				float: left;
+				width: calc(100% - 65px);
+				img{
+					float: left;
+					height: 30px;
+					width: 30px;
+					border-radius: 50%;
+					overflow: hidden;
+					background: #c7b9da;
+				}
+				.name-text{
+					display: block;
+					overflow: hidden;
+					color: $baseFontColorDark1;
+					@include font(14px, 20px);
+					word-break: break-all;
+					padding: 5px 10px 0;
+				}
+			}
+			.price-text{
+				float: right;
+				color: $baseFontColorDark2;
+				@include font(20px, 28px);
+				font-weight: 600;
+				width: 65px;
+				text-align: right;
 			}
 		}
 	}
 }
 
 
-@media not all and (min-resolution:.001dpcm){
-	section{
-		background-attachment: initial;
-		&.fix-bg{
-			background-attachment: initial;
-		}
-	}
+
+.search-holder{
+	max-width: 600px;
+	margin: 30px auto 0;
 }
 
+
 /*Calendar&Schedule page css end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

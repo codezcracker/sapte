@@ -1,11 +1,15 @@
 import { Divide as Hamburger } from 'hamburger-react'
-import MainNavigation from '../menu/main-nav';
 import {LogoIcon} from "../svgs-list"
 import {useState} from "preact/hooks";
+import WithCredentialNavigation from "../menu/withCredential-nav";
+import CategoryNav from "../menu/category-nav";
 
 
 const Header = () => {
-	const [menuClick, menuSetClick] = useState(false);
+	const [loginStatus, setLoginStatus] = useState(true);
+	const [menuClick, menuSetClick] = useState(true);
+	const [categoryStatus, setCategoryStatus] = useState(true)
+	
 	const MenuEvent = () => {
 		if(menuClick === true){
 			menuSetClick(false);
@@ -15,11 +19,30 @@ const Header = () => {
 		}
 	}
 	
+	
+	const CategoryEvent = () => {
+		if(categoryStatus === true){
+			setCategoryStatus(false);
+		}
+		else{
+			setCategoryStatus(true);
+		}
+	}
+	
+	
+	
+	
+	
+	
 	return (
 		<header id="header">
 			<div className="holder">
 				<div className="logo"><a href="/"><LogoIcon /></a></div>
-				<MainNavigation menuStatus={menuClick} />
+				{(loginStatus === true) ?
+					<WithCredentialNavigation />
+					:
+					null
+				}
 				<Hamburger distance="md" hideOutline={true} rounded size={32} toggle={MenuEvent} toggled={menuClick} />
 			</div>
 		</header>

@@ -5,16 +5,16 @@
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",
-  "theme_color": "gray",
+  "theme_color": "#fff",
   "icons": [
     {
-      "src": "/assets/icons/android-chrome-192x192.png",
-      "type": "image/png",
+      "src": "/assets/icons/favicon.svg",
+      "type": "image/svg+xml",
       "sizes": "192x192"
     },
     {
-      "src": "/assets/icons/android-chrome-512x512.png",
-      "type": "image/png",
+      "src": "/assets/icons/favicon.svg",
+      "type": "image/svg+xml",
       "sizes": "512x512"
     }
   ]
