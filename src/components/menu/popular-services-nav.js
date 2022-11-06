@@ -5,6 +5,7 @@ import {
 
 const serviceContentList = [
 	{
+		listId: 1,
 		listImage: "../../assets/images/prod1.jpeg",
 		listTitle: 'Plumbing +  really really long long long nameddsgdsggds',
 		listUrl: 'https://google.com',
@@ -16,6 +17,7 @@ const serviceContentList = [
 		listUserImage: "../../assets/images/user1.png",
 	},
 	{
+		listId: 2,
 		listImage: "../../assets/images/prod1.jpeg",
 		listTitle: 'Plumbing1',
 		listUrl: 'https://gmail.com',
@@ -25,29 +27,7 @@ const serviceContentList = [
 		listRatingNo: 120,
 		listUserName: 'Usman Ghani',
 		listUserImage: "../../assets/images/user1.png",
-	},
-	{
-		listImage: "../../assets/images/prod1.jpeg",
-		listTitle: 'Plumbing2',
-		listUrl: 'https://gmail.com',
-		listAddress: 'Lahore Pakistan',
-		listPrice: 100,
-		listRating: 5.0,
-		listRatingNo: 120,
-		listUserName: 'Usman Ghani',
-		listUserImage: "../../assets/images/user1.png",
-	},
-	{
-		listImage: "../../assets/images/prod1.jpeg",
-		listTitle: 'Plumbing3',
-		listUrl: 'https://gmail.com',
-		listAddress: 'Lahore Pakistan',
-		listPrice: 100,
-		listRating: 5.0,
-		listRatingNo: 120,
-		listUserName: 'Usman Ghani',
-		listUserImage: "../../assets/images/user1.png",
-	},
+	}
 ];
 
 const PopularServicesHolder = () => (
@@ -55,7 +35,7 @@ const PopularServicesHolder = () => (
 		<ul>
 			{
 				serviceContentList.map(serviceContentItems => (
-					<li key={serviceContentItems.listTitle}>
+					<li key={serviceContentItems.listId}>
 						<a className="popular-services-block" href={serviceContentItems.listUrl}>
 							<div className="popular-services-block-top">
 								<img src={serviceContentItems.listImage} />
