@@ -11,94 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f53ff01-b3f7-46ad-b8eb-0b8f145ce89c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/country.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/poppins-bold-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/poppins-bold-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/poppins-regular-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/poppins-regular-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/poppins-semibold-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/poppins-semibold-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/favicon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/error-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/error.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/prod1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/prod2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/user1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/menu/category-nav.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/sections/category.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/sections/error.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/sections/search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prop-types/node_modules/react-is/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prop-types/node_modules/react-is/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prop-types/node_modules/react-is/build-info.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prop-types/node_modules/react-is/cjs/react-is.development.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prop-types/node_modules/react-is/cjs/react-is.production.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prop-types/node_modules/react-is/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prop-types/node_modules/react-is/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prop-types/node_modules/react-is/umd/react-is.development.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/prop-types/node_modules/react-is/umd/react-is.production.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-is/cjs/react-is.development.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-is/cjs/react-is.development.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-is/cjs/react-is.production.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-is/cjs/react-is.production.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-is/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-is/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-is/umd/react-is.development.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-is/umd/react-is.development.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/react-is/umd/react-is.production.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-is/umd/react-is.production.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/fonts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/roboto-bold-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/roboto-bold-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/roboto-medium-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/roboto-medium-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/roboto-regular-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/roboto-regular-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/roboto-thin-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/roboto-thin-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/android-chrome-192x192.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/android-chrome-192x192.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/android-chrome-512x512.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/android-chrome-512x512.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/apple-touch-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/apple-touch-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/favicon-16x16.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/favicon-16x16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/favicon-32x32.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/favicon-32x32.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/achievment-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/background.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/config.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/config.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/custom.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/responsive.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/themes/default.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/themes/default.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/themes/theme-blue/theme-blue.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/themes/theme-indigo/theme-indigo.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/about-nav.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/achievement-nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/howitwork-nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/address-nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/address-nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/footer-nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/support-nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/keyfeatures-nav.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/main-nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/withCredential-nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/offer-services-nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/popular-services-nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/portfolio-nav.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/skills-nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/product-nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/about.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/achievement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/howitwork.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/banner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/banner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/circle-animation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/contact.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/key-features.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/offer-services.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/popular-services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/portfolio.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/skill.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/svgs-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/svgs-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/search.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +79,7 @@
       <workItem from="1666526212441" duration="83280000" />
       <workItem from="1667399165908" duration="2840000" />
       <workItem from="1667466611708" duration="2026000" />
-      <workItem from="1667469043494" duration="58993000" />
+      <workItem from="1667469043494" duration="59471000" />
     </task>
     <servers />
   </component>

@@ -4,7 +4,7 @@ import { ReactSearchAutocomplete } from 'react-search-autocomplete';
 import Country from "../../../data/country.json";
 import {Link} from "preact-router/match";
 
-const customData = require('../../../data/country.json');
+//const customData = require('../../../data/country.json');
 
 const Search = () => {
 	const items = [
