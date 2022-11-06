@@ -33,7 +33,10 @@ const Footer = () => {
 			
 			<div className="footer-bottom">
 				<div className="holder">
-					<p>&copy; 2022 <a href="/">{document.title}</a>. All Rights Reserved.</p>
+					{typeof document !== 'undefined' && (
+						<p>&copy; 2022 <a href="/">{document.title}</a>. All Rights Reserved.</p>
+					)}
+
 					<SocialNav />
 				</div>
 			</div>

@@ -12,7 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5f53ff01-b3f7-46ad-b8eb-0b8f145ce89c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/popular-services-nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/popular-services-nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/footer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +80,7 @@
       <workItem from="1666526212441" duration="83280000" />
       <workItem from="1667399165908" duration="2840000" />
       <workItem from="1667466611708" duration="2026000" />
-      <workItem from="1667469043494" duration="60275000" />
+      <workItem from="1667469043494" duration="60771000" />
     </task>
     <servers />
   </component>
@@ -103,10 +103,11 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="750" y="463" key="#ESLint" timestamp="1667636889569">
-      <screen x="0" y="25" width="1680" height="1025" />
+    <state x="681" y="-810" key="#ESLint" timestamp="1667752610863">
+      <screen x="-462" y="-1415" width="2560" height="1415" />
     </state>
     <state x="681" y="-811" key="#ESLint/-462.-1415.2560.1415/0.25.1680.1025@-462.-1415.2560.1415" timestamp="1666700511021" />
+    <state x="681" y="-810" key="#ESLint/0.25.1680.1025/-462.-1415.2560.1415@-462.-1415.2560.1415" timestamp="1667752610863" />
     <state x="750" y="463" key="#ESLint/0.25.1680.1025/-462.-1415.2560.1415@0.25.1680.1025" timestamp="1667636889569" />
     <state x="724" y="-645" key="#File_Watchers" timestamp="1665045400258">
       <screen x="-109" y="-1055" width="1920" height="1055" />
@@ -166,12 +167,13 @@
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="1009" y="285" width="745" height="985" key="dock-window-1/-462.-1415.2560.1415/0.25.1680.1025@0.25.1680.1025" timestamp="1665238495968" />
-    <state x="425" y="-1091" width="864" height="988" key="find.popup" timestamp="1667752042248">
-      <screen x="-462" y="-1415" width="2560" height="1415" />
+    <state x="582" y="260" width="836" height="716" key="find.popup" timestamp="1667752865618">
+      <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="550" y="-895" width="602" height="735" key="find.popup/-109.-1055.1920.1055/0.25.1680.969@-109.-1055.1920.1055" timestamp="1665049041154" />
     <state x="577" y="180" width="567" height="715" key="find.popup/-462.-1415.2560.1415/0.25.1680.1025@0.25.1680.1025" timestamp="1666528084447" />
     <state x="425" y="-1091" width="864" height="988" key="find.popup/0.25.1680.1025/-462.-1415.2560.1415@-462.-1415.2560.1415" timestamp="1667752042248" />
+    <state x="582" y="260" width="836" height="716" key="find.popup/0.25.1680.1025@0.25.1680.1025" timestamp="1667752865618" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1666443176984">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
