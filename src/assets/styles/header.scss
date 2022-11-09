@@ -7,7 +7,7 @@ header{
   z-index: 9;
   @include clearfix();
   @include anim(0.5s);
-  &.statusActive{
+  &.desktop-menu.belowFold {
     background-color: transparentize($blackColor, 0.1);
     box-shadow: 0 0 10px rgba(0,0,0,0.7);
   }
@@ -120,10 +120,25 @@ header{
     position: absolute;
     top: 89px;
     right: 0;
+
     nav{
       overflow-y: auto;
       height: 80vh;
+
+      li:not(:first-child) {
+        border-top: 1px solid #e1e1e1;
+      }
     }
+
+    details summary, a {
+      display: block;
+      color: $baseFontColorDark2;
+      @include font(16px, 24px);
+      padding: 10px 20px;
+      cursor: pointer;
+      margin: 5px 0;
+    }
+
     details{
       &[open]{
         summary{
@@ -134,12 +149,16 @@ header{
         }
       }
       summary{
-        display: block;
-        color: $baseFontColorDark2;
-        @include font(16px, 24px);
-        padding: 10px 20px;
+        position: relative;
+        &::-webkit-details-marker{
+          display: none;
+        }
         &:after{
           content: "►";
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          transform: translateY(-50%);
         }
       }
     }

@@ -1,49 +1,26 @@
-import { Divide as Hamburger } from 'hamburger-react'
-import {LogoIcon} from "../svgs-list"
 import {useState} from "preact/hooks";
+import {Divide as Hamburger} from 'hamburger-react'
+
+import {LogoIcon} from "../svgs-list"
 import UnAuthNav from "../menu/withCredential-nav";
 import MobileAuthNav from "../menu/mobile-auth-nav";
 
-const Header = () => {
-	
-	const [scrollValue, setScrollValue] = useState("");
+const Header = ({isAboveFold}) => {
+	const [show, setShow] = useState(false);
 	const [loginStatus, setLoginStatus] = useState(true);
-	const [menuClick, menuSetClick] = useState(false);
-	
-	var oldScrollY = window.scrollY;
-	
-	window.onscroll = function(e) {
-		if(window.scrollY > 101){
-			setScrollValue("statusActive");
-		}
-		else if(window.scrollY <= 100){
-			setScrollValue("");
-		}
-		oldScrollY = window.scrollY;
-	}
-	
-	const MenuEvent = () => {
-		if(menuClick === true){
-			menuSetClick(false);
-		}
-		else{
-			menuSetClick(true);
-		}
-	}
-	
+
 	return (
-		<header id="header" className={scrollValue}>
+		<header id="header" className={isAboveFold ? 'aboveFold' : 'belowFold'}>
 			<div className="holder">
 				<div className="logo"><a href="/"><LogoIcon /></a></div>
-				
-				<div className="desktop-menu">
-					{(loginStatus === true) ? <MobileAuthNav /> : <UnAuthNav />}
-				</div>
-				
-				<Hamburger distance="md" hideOutline={true} rounded size={32} toggle={MenuEvent} toggled={menuClick} />
+				<Hamburger distance="md" hideOutline={true} rounded size={32} toggle={() => setShow(!show)} toggled={show} />
 
-				<div className="mobile-menu" menuOpenStatus={menuClick}>
-					{(loginStatus === true) ? <MobileAuthNav deviceStatus={true}/> : <UnAuthNav />}
+				<div className="desktop-menu">
+					{loginStatus ? <MobileAuthNav /> : <UnAuthNav />}
+				</div>
+
+				<div className="mobile-menu" menuOpenStatus={show}>
+					{loginStatus ? <MobileAuthNav isMobile /> : <UnAuthNav />}
 				</div>
 			</div>
 		</header>
@@ -51,6 +28,3 @@ const Header = () => {
 }
 
 export default Header;
-
-
-

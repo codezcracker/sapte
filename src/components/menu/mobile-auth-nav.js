@@ -1,59 +1,87 @@
 import { Link } from 'preact-router/match';
 
-
-const menuList = [
+const menu = [
 	{
-		listName: 'Orders',
-		subMenuList: {'ddd': '#'}
+		title: 'Orders',
+		link: '/',
 	},
 	{
-		listName: 'Messages',
-		subMenuList: {'View profile2': '#'}
+		title: 'Messages',
+		link: '/',
 	},
 	{
-		listName: 'Notifications',
-		subMenuList: {'View profile3': '#'}
+		title: 'Notifications',
+		link: '/',
 	},
 	{
-		listName: 'Profile',
-		subMenuList: {'View profile4': '#', 'Settings': '#', 'Payment methods': '#', 'Transaction history': '#', 'Support': '#'}
+		title: 'Profile',
+		links: [
+			{
+				title: 'View Profile',
+				link: '/',
+			},
+			{
+				title: 'Settings',
+				link: '/',
+			},
+			{
+				title: 'Payment methods',
+				link: '/',
+			},
+			{
+				title: 'Transaction history',
+				link: '/',
+			},
+			{
+				title: 'Support',
+				link: '/',
+			},
+		]
 	},
 	{
-		listName: 'Sell Services',
-		subMenuList: {'View profile': '#'}
+		title: 'Sell Services',
+		link: '/',
 	},
 	{
-		listName: 'Log out',
-		subMenuList: {'View profile': '#'}
+		title: 'Log out',
+		link: '/',
 	}
 ];
 
+function AccordionLinks({ title, links = [] }) {
+	if (links.lenght) { return null;  }
 
-const MobileAuthNav = (props) => (
+	return (
+		<details>
+			<summary>{title}</summary>
+
+			<ul className="sub-menu-holder">
+				{links.map(link => (
+					<li key={link.title}>
+						<Link href={link.link}>
+							{link.title}
+						</Link>
+					</li>
+				))}
+			</ul>
+		</details>
+	)
+}
+
+const MobileAuthNav = ({ isMobile }) => (
 	<nav id="mobile-auth-nav">
 		<ul>
-			{
-				menuList.map(menuItem => (
-					<li key={menuItem.listName}>
-						<details>
-							<summary>{menuItem.listName}</summary>
-							{
-								(props.deviceStatus === true) ?
-									<ul className="sub-menu-holder">
-										{
-											Object.keys(menuItem.subMenuList).map(key => (
-												<li key={key}><Link activeClassName="active" href={menuItem.subMenuList[key]}>{key}</Link></li>
-											))
-										}
-									</ul>
-									: ""
-							}
-						</details>
-					</li>
-				))
-			}
+			{menu.map(({title, link, links}) => (
+				<li key={title}>
+					{(!isMobile || link) ? (
+						<Link href={link}>{title}</Link>
+					) : (
+						<AccordionLinks title={title} links={links}/>
+					)}
+				</li>
+			))}
 		</ul>
 	</nav>
 );
-export default MobileAuthNav
 
+export default MobileAuthNav
