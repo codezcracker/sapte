@@ -42,10 +42,7 @@ const MobileAuthNav = (props) => (
 									<ul className="sub-menu-holder">
 										{
 											Object.keys(menuItem.subMenuList).map(key => (
-												return(
-												(menuItem.subMenuList[key].length)
-													<li key={key}><Link activeClassName="active" href={menuItem.subMenuList[key]}>{key}</Link></li>
-												)
+												<li key={key}><Link activeClassName="active" href={menuItem.subMenuList[key]}>{key}</Link></li>
 											))
 										}
 									</ul>

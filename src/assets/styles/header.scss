@@ -128,6 +128,9 @@ header{
       &[open]{
         summary{
           color: $themeColorDark;
+          &:after{
+            content: '▼';
+          }
         }
       }
       summary{
@@ -135,6 +138,9 @@ header{
         color: $baseFontColorDark2;
         @include font(16px, 24px);
         padding: 10px 20px;
+        &:after{
+          content: "►";
+        }
       }
     }
   }
