@@ -150,63 +150,112 @@ section{
 .category-section{
 	background: $whiteColor;
 	padding: 20px 0;
-	ul{
+	#category-nav{
+		> ul{
+			> li{
+				@include display(inline-block, top);
+				width: 25%;
+				padding: 0 16px;
+				color: $baseFontColorDark2;
+				@include clearfix();
+				@include anim(0.2s);
+				> a{
+					display: block;
+					position: relative;
+					border-bottom: 1px solid $borderColor;
+					padding: 15px 0 15px 30px;
+				}
+				&:hover{
+					&:nth-child(4n+1){
+						.sub-menu-holder{
+							margin-left: 0;
+						}
+					}
+					&:nth-child(4n+2){
+						.sub-menu-holder{
+							margin-left: -360px;
+						}
+					}
+					&:nth-child(4n+3){
+						.sub-menu-holder{
+							margin-left: -720px;
+						}
+					}
+					&:nth-child(4n+4){
+						.sub-menu-holder{
+							margin-left: -1080px;
+						}
+					}
+					color: $themeColorLight;
+					border-color: $themeColorLight;
+					path{
+						stroke: $themeColorLight;
+					}
+					.sub-menu-holder{
+						display: block;
+					}
+				}
+				i{
+					display: block;
+					height: 24px;
+					width: 20px;
+					position: absolute;
+					top: 50%;
+					left: 0;
+					transform: translateY(-50%);
+					svg{
+						display: block;
+						height: 100%;
+						width: 100%;
+						fill: none;
+					}
+				}
+				span{
+					display: block;
+					overflow: hidden;
+					@include font(16px, 24px);
+				}
+			}
+		}
+	}
+	.sub-menu-holder{
+		position: relative;
+		z-index: 9;
+		display: none;
+		background-color: $whiteColor;
+		box-shadow: 0 0 20px transparentize($blackColor, 0.9);
+		border-radius: 15px;
+		width: 1440px;
+		margin: 20px 0 0;
+		ul{
+			padding: 5px 0;
+		}
 		li{
 			@include display(inline-block, top);
-			width: 25%;
-			padding: 0 16px;
+			width: 20%;
 		}
 		a{
 			display: block;
-			position: relative;
-			color: $baseFontColorDark2;
-			border-bottom: 1px solid $borderColor;
-			padding: 15px 0 15px 30px;
-			@include clearfix();
+			color: $baseFontColorDark1;
+			padding: 15px 20px;
 			@include anim(0.2s);
 			&:hover{
-				color: $themeColorLight;
-				border-color: $themeColorLight;
-				path{
-					stroke: $themeColorLight;
-				}
+				color: $themeColorDark;
 			}
-			i{
-				display: block;
-				height: 24px;
-				width: 20px;
-				position: absolute;
-				top: 50%;
-				left: 0;
-				transform: translateY(-50%);
-				svg{
-					display: block;
-					height: 100%;
-					width: 100%;
-					fill: none;
-				}
-			}
-			span{
-				display: block;
-				overflow: hidden;
-				@include font(16px, 24px);
+		}
+		.show-all-services-link{
+			display: block;
+			@include font(16px, 24px);
+			border-top: 1px solid $borderColor;
+			padding: 20px;
+			@include anim(0.2s);
+			&:hover{
+				color: $themeColorDark;
+				border-color: $themeColorDark;
 			}
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .portfolio-section{
 	.heading{
@@ -490,8 +539,24 @@ section{
 
 
 .search-holder{
-	max-width: 600px;
+	max-width: 800px;
 	margin: 30px auto 0;
+	.search-block-field{
+		@include display(inline-block, middle);
+		width: 40%;
+	}
+	button{
+		@include display(inline-block, middle);
+		color: $whiteColor;
+		@include font(16px, 26px);
+		font-weight: bold;
+		background-color: $themeColorDark;
+		border: none;
+		border-radius: 0 5px 5px 0;
+		height: 46px;
+		width: 20%;
+		padding: 10px;
+	}
 }
 
 

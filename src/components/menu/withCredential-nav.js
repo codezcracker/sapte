@@ -5,7 +5,7 @@ const menuList = [
 	{ listName: 'Sign up', listUrl: '/signup' }
 ];
 
-const WithCredentialNavigation = (props) => (
+const UnAuthNav = (props) => (
 	<nav id="withCredential-navigation" className={(props.menuStatus === true) ? "mobileDevice" : null}>
 		<ul>
 			{
@@ -18,7 +18,7 @@ const WithCredentialNavigation = (props) => (
 		</ul>
 	</nav>
 );
-export default WithCredentialNavigation;
+export default UnAuthNav;
 
 
 

@@ -4,7 +4,7 @@ const Category = () => {
 	return (
 		<section id="category-section" className="category-section">
 			<div className="holder">
-				<CategoryNav iconVisible={true} />
+				<CategoryNav iconVisible={true} subMenuVisible={true} />
 			</div>
 		</section>
 	)

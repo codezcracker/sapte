@@ -18,7 +18,7 @@ const Footer = () => {
 					</div>
 					<div className="footer-column">
 						<h6>Categories</h6>
-						<CategoryNav iconVisible={false} />
+						<CategoryNav iconVisible={false} subMenuVisible={false} />
 					</div>
 					<div className="footer-column">
 						<h6>Products</h6>
@@ -36,7 +36,6 @@ const Footer = () => {
 					{typeof document !== 'undefined' && (
 						<p>&copy; 2022 <a href="/">{document.title}</a>. All Rights Reserved.</p>
 					)}
-
 					<SocialNav />
 				</div>
 			</div>

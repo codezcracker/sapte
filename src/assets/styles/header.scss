@@ -1,6 +1,4 @@
 header{
-//  background-color: transparentize($whiteColor, 0.1);
-//  box-shadow: 0 0 10px rgba(0,0,0,0.2);
   padding: 20px 0;
   position: fixed;
   top: 0;
@@ -8,6 +6,11 @@ header{
   right: 0;
   z-index: 9;
   @include clearfix();
+  @include anim(0.5s);
+  &.statusActive{
+    background-color: transparentize($blackColor, 0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+  }
   .logo{
     float: left;
     width: 100px;
@@ -24,28 +27,47 @@ header{
       fill: $themeColorDark;
     }
   }
-
-  nav{
+  .hamburger-react{
     float: right;
-    ul{
-      @include clearfix();
-    }
-    li{
-      float: left;
-      margin: 0 5px;
-    }
-    a{
-      display: block;
-      color: $whiteColor;
-      border-radius: 7px;
-      border: 1px solid transparent;
-      cursor: pointer;
-      padding: 10px 30px;
-      @include font(16px, 18px);
-      @include anim(0.5s);
-      &#signup-button{
+    display: none;
+  }
+  .desktop-menu{
+    nav{
+      float: right;
+      ul{
+        @include clearfix();
+      }
+      li{
+        float: left;
+      }
+      a{
+        display: block;
         color: $whiteColor;
-        border-color: $whiteColor;
+        @include font(16px, 18px);
+        border-radius: 7px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        padding: 10px 30px;
+        @include anim(0.5s);
+        &#signup-button{
+          color: $whiteColor;
+          border-color: $whiteColor;
+          &:hover{
+            color: $whiteColor;
+            border-color: $themeColorLight;
+            background: $themeColorLight;
+          }
+          &.active{
+            color: $whiteColor;
+            border-color: $themeColorDark;
+            background: $themeColorDark;
+            &:hover{
+              color: $whiteColor;
+              border-color: $themeColorLight;
+              background: $themeColorLight;
+            }
+          }
+        }
         &:hover{
           color: $whiteColor;
           border-color: $themeColorLight;
@@ -62,26 +84,67 @@ header{
           }
         }
       }
-      &:hover{
+      summary{
+        display: block;
         color: $whiteColor;
-        border-color: $themeColorLight;
-        background: $themeColorLight;
-      }
-      &.active{
-        color: $whiteColor;
-        border-color: $themeColorDark;
-        background: $themeColorDark;
+        @include font(16px, 18px);
+        border-radius: 7px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        padding: 10px 20px;
+        @include anim(0.5s);
         &:hover{
           color: $whiteColor;
           border-color: $themeColorLight;
           background: $themeColorLight;
         }
+        &.active{
+          color: $whiteColor;
+          border-color: $themeColorDark;
+          background: $themeColorDark;
+          &:hover{
+            color: $whiteColor;
+            border-color: $themeColorLight;
+            background: $themeColorLight;
+          }
+        }
       }
     }
   }
-  .hamburger-react{
-    float: right;
+  .mobile-menu{
     display: none;
-    margin: 3px 0 0;
+    background-color: $whiteColor;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+    width: 100%;
+    padding: 10px 0;
+    position: absolute;
+    top: 89px;
+    right: 0;
+    nav{
+      overflow-y: auto;
+      height: 80vh;
+    }
+    details{
+      &[open]{
+        summary{
+          color: $themeColorDark;
+        }
+      }
+      summary{
+        display: block;
+        color: $baseFontColorDark2;
+        @include font(16px, 24px);
+        padding: 10px 20px;
+      }
+    }
+  }
+  .sub-menu-holder{
+    padding: 0 20px;
+    a{
+      display: block;
+      color: $baseFontColorLight;
+      @include font(16px, 24px);
+      padding: 10px 30px;
+    }
   }
 }

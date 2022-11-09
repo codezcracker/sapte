@@ -1,77 +1,100 @@
 import { ReactSearchAutocomplete } from 'react-search-autocomplete';
 
 
-import Country from "../../../data/country.json";
-import {Link} from "preact-router/match";
-
-//const customData = require('../../../data/country.json');
-
 const Search = () => {
-	const items = [
+	const countryList = [
 		{
 			id: 0,
-			name: 'Cobol'
+			name: 'Dubai'
 		},
 		{
 			id: 1,
-			name: 'JavaScript'
+			name: 'Abu Dhabi'
 		},
 		{
 			id: 2,
-			name: 'Basic'
+			name: 'Fujairah'
 		},
 		{
 			id: 3,
-			name: 'PHP'
+			name: 'Sharjah'
 		},
-		{
-			id: 4,
-			name: 'Java'
-		}
 	]
 	
-	const handleOnSearch = (string, results) => {
-		// onSearch will have as the first callback parameter
-		// the string searched and for the second the results.
-		console.log(string, results)
-	}
+	const categoryList = [
+		{
+			id: 0,
+			name: 'Handyman services'
+		},
+		{
+			id: 1,
+			name: 'Hauling services'
+		},
+		{
+			id: 2,
+			name: 'Help moving'
+		},
+		{
+			id: 3,
+			name: 'Handyman'
+		},
+	]
 	
-	const handleOnHover = (result) => {
-		// the item hovered
-		console.log(result)
-	}
-	
-	const handleOnSelect = (item) => {
-		// the item selected
-		console.log(item)
-	}
-	
-	const handleOnFocus = () => {
-		console.log('Focused')
-	}
-	
-	const formatResult = (item) => {
+	const countryFormatResult = (item) => {
 		return (
-			<>
-				<span style={{ display: 'block', textAlign: 'left' }}>id: {item.id}</span>
-				<span style={{ display: 'block', textAlign: 'left' }}>name: {item.name}</span>
-			</>
+			<ul>
+				<li>
+					<strong>UAE - </strong>
+					<span>{item.name}</span>
+				</li>
+			</ul>
 		)
 	}
+	
+	const categoryFormatResult = (item) => {
+		return (
+			<ul>
+				<li>
+					<strong>UAE - </strong>
+					<span>{item.name}</span>
+				</li>
+			</ul>
+		)
+	}
+	
 
-
+	
 	return(
 		<div id="search-holder" className="search-holder">
 			<div className="search-block">
-				<ReactSearchAutocomplete
-					items={items}
-					onSearch={handleOnSearch}
-					onHover={handleOnHover}
-					onSelect={handleOnSelect}
-					onFocus={handleOnFocus}
-					autoFocus
-					formatResult={formatResult}
-				/>
+				<div className="search-block-field">
+					<ReactSearchAutocomplete
+						items={categoryList}
+						formatResult={categoryFormatResult}
+						autoFocus
+						placeholder={"Search for a service"}
+						styling={
+							{
+								borderRadius: "5px 0 0 5px",
+							}
+						}
+					/>
+				</div>
+				<div className="search-block-field location-style">
+					<ReactSearchAutocomplete
+						showIcon={false}
+						items={countryList}
+						formatResult={countryFormatResult}
+						autoFocus
+						placeholder={"Where"}
+						styling={
+							{
+								borderRadius: "0px",
+							}
+						}
+					/>
+				</div>
+				<button type="button">Search</button>
 			</div>
 		</div>
 	)

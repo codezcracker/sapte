@@ -3,57 +3,60 @@ import { Link } from 'preact-router/match';
 
 const menuList = [
 	{
-		listName: 'Orders'
+		listName: 'Orders',
+		subMenuList: {'ddd': '#'}
 	},
 	{
-		listName: 'Messages'
+		listName: 'Messages',
+		subMenuList: {'View profile2': '#'}
 	},
 	{
-		listName: 'Notifications'
+		listName: 'Notifications',
+		subMenuList: {'View profile3': '#'}
 	},
 	{
 		listName: 'Profile',
-		subMenuList: {'View profile': '#', 'Settings': '#', 'Payment methods': '#', 'Transaction history': '#', 'Support': '#'}
+		subMenuList: {'View profile4': '#', 'Settings': '#', 'Payment methods': '#', 'Transaction history': '#', 'Support': '#'}
 	},
 	{
-		listName: 'Sell Services'
+		listName: 'Sell Services',
+		subMenuList: {'View profile': '#'}
 	},
 	{
-		listName: 'Log out'
+		listName: 'Log out',
+		subMenuList: {'View profile': '#'}
 	}
 ];
 
 
-const MobileAuthNav = (props) => {
-	return (
-		<nav id="mobile-auth-nav">
-			<ul>
-				{
-					menuList.map(menuItem => (
-						<li key={menuItem.listTitle}>
-							<Link>
-								{(props.iconVisible === true) ? <i>{menuItem.listIcon}</i> : null}
-								<span>{menuItem.listName}</span>
-							</Link>
+const MobileAuthNav = (props) => (
+	<nav id="mobile-auth-nav">
+		<ul>
+			{
+				menuList.map(menuItem => (
+					<li key={menuItem.listName}>
+						<details>
+							<summary>{menuItem.listName}</summary>
 							{
-								(props.subMenuVisible === false) ?
-									<nav className="sub-menu-holder">
-										<ul>
-											{
-												Object.keys(menuItem.subMenuList).map(key => (
+								(props.deviceStatus === true) ?
+									<ul className="sub-menu-holder">
+										{
+											Object.keys(menuItem.subMenuList).map(key => (
+												return(
+												(menuItem.subMenuList[key].length)
 													<li key={key}><Link activeClassName="active" href={menuItem.subMenuList[key]}>{key}</Link></li>
-												))
-											}
-										</ul>
-									</nav>
-									: null
-								}
-						</li>
-					))
-				}
-			</ul>
-		</nav>
-	)
-};
+												)
+											))
+										}
+									</ul>
+									: ""
+							}
+						</details>
+					</li>
+				))
+			}
+		</ul>
+	</nav>
+);
 export default MobileAuthNav
 
