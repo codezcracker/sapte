@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 node_modules/
 config.codekit3
@@ -11,3 +12,9 @@ node_modules/.cache/.eslintcache
 config.codekit3
 build/
 package-lock.json
+=======
+/node_modules/
+yarn.lock
+package-lock.json
+.idea
+>>>>>>> bc5bb0a9a3cd5b20ae0a3d4a5e85f87950f9684a
