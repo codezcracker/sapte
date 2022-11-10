@@ -1,12 +1,13 @@
 import { Fragment } from 'preact';
-import Category from "./category";
+
 import Banner from "./banner";
+import Category from "./category";
 import HowItWork from "./howitwork";
 import PopularServices from "./popular-services";
 
-const Home = () => (
+const Home = ({aboveFold}) => (
 	<Fragment>
-		<Banner />
+		<Banner aboveFold={aboveFold} />
 		<Category />
 		<PopularServices />
 		<HowItWork />
